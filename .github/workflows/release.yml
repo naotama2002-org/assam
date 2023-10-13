@@ -17,11 +17,6 @@ jobs:
       - id: tool-versions
         run: awk '{ print $1"="$2 }' .tool-versions >> $GITHUB_OUTPUT
         shell: bash
-      - uses: actions/create-github-app-token@v1
-        id: app-token
-        with:
-          app-id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
       - uses: cybozu/octoken-action@v1
         id: create-iat
         with:
