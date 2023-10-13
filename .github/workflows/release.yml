@@ -22,9 +22,14 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
+      - uses: cybozu/octoken-action@v1
+        id: create-iat
+        with:
+          github_app_id: ${{ secrets.APP_ID }}
+          github_app_private_key: ${{ secrets.PRIVATE_KEY }}
       - uses: goreleaser/goreleaser-action@v5
         with:
           version: "v${{ steps.tool-versions.outputs.goreleaser }}"
           args: release --clean
         env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          GITHUB_TOKEN: ${{ steps.create-iat.outputs.token }}
