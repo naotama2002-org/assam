@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"github.com/chromedp/cdproto/network"
 	"github.com/chromedp/chromedp"
-	"github.com/cybozu/assam/aws"
+	"github.com/naotama2002-org/assam/aws"
 	"github.com/pkg/errors"
 	"net/url"
 	"os"

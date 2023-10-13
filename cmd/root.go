@@ -7,11 +7,11 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/cybozu/assam/aws"
-	"github.com/cybozu/assam/config"
-	"github.com/cybozu/assam/defaults"
-	"github.com/cybozu/assam/idp"
-	"github.com/cybozu/assam/prompt"
+	"github.com/naotama2002-org/assam/aws"
+	"github.com/naotama2002-org/assam/config"
+	"github.com/naotama2002-org/assam/defaults"
+	"github.com/naotama2002-org/assam/idp"
+	"github.com/naotama2002-org/assam/prompt"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 

@@ -1,4 +1,4 @@
-module github.com/cybozu/assam
+module github.com/naotama2002-org/assam
 
 go 1.20
 
