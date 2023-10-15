@@ -38,7 +38,7 @@ changelog:
     - Merge pull request
     - Merge branch
 brews:
-  - tap:
+  - repository:
       owner: naotama2002-org
       name: homebrew-assam
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
