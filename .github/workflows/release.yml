@@ -27,4 +27,5 @@ jobs:
           version: "v${{ steps.tool-versions.outputs.goreleaser }}"
           args: release --clean
         env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAP_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
