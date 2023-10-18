@@ -28,7 +28,7 @@ jobs:
       with:
         app-id: ${{ secrets.APP_ID }}
         private-key: ${{ secrets.PRIVATE_KEY }}
-        repositories: homebrew-assam
+        repositories: assam,homebrew-assam
     - name: Create Contents with GitHub App token
       env:
         GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
