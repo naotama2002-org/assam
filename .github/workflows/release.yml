@@ -22,7 +22,7 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
-          repositories: homebrew-assam
+          repositories: "assam,homebrew-assam"
       - uses: goreleaser/goreleaser-action@v5
         with:
           version: "v${{ steps.tool-versions.outputs.goreleaser }}"
