@@ -22,10 +22,10 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
+          repositories: homebrew-assam
       - uses: goreleaser/goreleaser-action@v5
         with:
           version: "v${{ steps.tool-versions.outputs.goreleaser }}"
           args: release --clean
         env:
-          # GITHUB_TOKEN: ${{ secrets.PAT }}
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
