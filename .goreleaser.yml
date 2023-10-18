@@ -38,7 +38,7 @@ changelog:
     - Merge pull request
     - Merge branch
 brews:
-  - repository:
+  - tap:
       owner: naotama2002-org
       name: homebrew-assam
     description: "Get a credential by AssumeRoleWithSAML for AWS CLI and SDK"
