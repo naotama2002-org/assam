@@ -17,12 +17,11 @@ jobs:
       - id: tool-versions
         run: awk '{ print $1"="$2 }' .tool-versions >> $GITHUB_OUTPUT
         shell: bash
-      - uses: actions/create-github-app-token@v1
+      - uses: cybozu/octoken-action@v1
         id: app-token
         with:
-          app-id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.PRIVATE_KEY }}
-          repositories: "assam,homebrew-assam"
+          github_app_id: ${{ secrets.APP_ID }}
+          github_app_private_key: ${{ secrets.PRIVATE_KEY }}
       - uses: goreleaser/goreleaser-action@v5
         with:
           version: "v${{ steps.tool-versions.outputs.goreleaser }}"
